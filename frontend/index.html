@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Quickpic</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- You can add your styles and scripts here -->
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/provided.css" />
+    <script type="module" src="src/helpers.js"></script>
+    <script type="module" src="src/api.js"></script>
+</head>
+
+<body>
+    <!-- This is an example app structure, you can modify this as much as you choose -->
+    <header class="banner">
+        <h1 id="WebName">Quickpic</h1>
+        <ul class="nav">
+            <li class="nav-item">Not yet login</li>
+        </ul>
+    </header>
+    <main role="main" id="main">
+        <!-- app goes here -->
+        <div class="mainPage">
+            <div id="selfInfo" style="display: none;">
+                <h4>User Information</h4>
+                <ul id="selfInfoUL">
+                    <li class="selfInfoLI" id="selfInfoLI_1">Username: <i id="selfInfo_uname"></i></li>
+                    <li class="selfInfoLI" id="selfInfoLI_2">Email: <i id="selfInfo_email"></i></li>
+                    <li class="selfInfoLI" id="selfInfoLI_3">Name: <i id="selfInfo_name"></i></li>
+                    <li class="selfInfoLI" id="selfInfoLI_4">Posts: <i id="selfInfo_posts"></i></li>
+                    <li class="selfInfoLI" id="selfInfoLI_5">
+                        <div class="selfInfoLIDiv">Following <i id="selfInfo_following"></i> Users</div>
+                        <button id="selfInfoBTN" class="BTN">Show</button>
+                    </li>
+                    <li class="selfInfoLI" id="Focus" style="display: none;"></li>
+                    <li class="selfInfoLI" id="selfInfoLI_6">Followed by <i id="selfInfo_followed"></i> Users</li>
+                </ul>
+                <button id="UpdateProfile" class="BTN" style="display: none;">Edit Profile</button>
+            </div>
+
+            <div class="content">
+                <div id="UserpageTitle" style="display: none;"></div>
+                <!-- <div id="notImplement" class="warning" style="display: none;">Not yet implemented</div> -->
+                <form id="login" class="infoForm" method="POST">
+                    <input type="text" placeholder="Username" id="usernameLogin" required><br>
+                    <input type="password" placeholder="Password" id="passwordLogin" required><br>
+                    <div class="warning" id="checkNotNull" style="display: none;"></div>
+                    <button type="submit" id="loginbtn" value="loginbtn" class="btn" form="login">Login</button>
+                </form>
+
+                <div id="transform" class="transform">
+                    <span>Don't have an account?</span>
+                    <button id="turnToRegister" value="turnToRegister" class="BTN">Register Here</button>
+                </div>
+
+                <form id="registration" class="infoForm" method="POST" style="display: none;">
+                    <input type="text" placeholder="Username" id="usernameRegister" name="usernameRegister"
+                        required><br>
+                    <input type="password" placeholder="Password" id="passwordRegister" name="passwordRegister"
+                        required><br>
+                    <input type="password" placeholder="Confirm Password" id="confirmP" name="confirmP"><br>
+                    <div class="warning" id="checkConfirmPwd" style="display: none;"></div>
+                    <input type="text" placeholder="Email Address" id="email" name="email" required><br>
+                    <input type="text" placeholder="Name" id="name" name="name" required><br>
+                    <div class="warning" id="checkNotNullReg" style="display: none;"></div>
+                    <button type="submit" id="registerbtn" value="registerbtn" class="btn" form="registration">Sign
+                        Up</button>
+                </form>
+
+                <div id="transformToLogin" class="transform" style="display: none;">
+                    <span>Already have an account?</span>
+                    <button id="turnToLogin" value="turnToLogin" class="BTN">Login Here</button>
+                </div>
+
+                <div id="topSearch" style="display: none;">
+                    <input type="text" name="searchUsers" id="searchUsers" placeholder="Start to Search Someone">
+                    <button type="submit" id="searchUserbtn">Search</button><br>
+                </div>
+
+                <div id="selfInfoAndnewPost">
+                    <div id="newPost" style="display: none;">
+                        <input type="text" name="newContentPost" id="newContentPost"
+                            placeholder="Share with your friends">
+                        <br>
+                        <div class="newPostLower">
+                            <input type="file" id="file" class="filepath" accept="image/png,image/PNG"> <label
+                                for="file">(accept .png only)</label>
+                            <button type="submit" id="subNewPost">Post</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="postsList"></div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; Quickpic</p>
+    </footer>
+    <script type="module" src="src/main.js"></script>
+</body>
+
+</html>

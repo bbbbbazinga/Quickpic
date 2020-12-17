@@ -1,0 +1,456 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    height: 100%;
+    font: 18px/1.5 -apple-system, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #312e37;
+}
+
+i {
+    font-weight: bolder;
+    color: #312e37;
+    font-size: 15px;
+}
+
+li {
+    list-style: none
+}
+
+img {
+    border: 0;
+    vertical-align: middle
+}
+
+button, .nav-item, .NameBTN, #WebName, .commentsNum, .likesNum {
+    cursor: pointer
+}
+
+a {
+    color: #fff;
+    text-decoration: none
+}
+
+a:hover {
+    color: #000;
+}
+
+button,
+input {
+    font-family: arial, sans-serif;
+    border: 0; 
+    outline: none;
+}
+
+input {
+    padding-left: 5px;
+}
+
+.banner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #312e37;
+    color: #fafafa;
+    min-height: 60px;
+    border-bottom: 1px solid rgba(0,0,0,.0975);
+}
+
+footer {
+    border-top: 1px solid rgba(0,0,0,.0975);
+    padding: 10px;
+    background-color: #312e37;
+    color: #fafafa;
+    min-height: 60px;
+    text-align: right;
+}
+
+.banner > *, footer > * {
+    margin: 10px 25px;
+}
+
+.nav {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-item {
+    margin: auto;
+    padding: 10px;
+    display: inline;
+    list-style-type: none;
+    font: 20px 'Open Sans';
+    font-weight: bolder;
+}
+
+.BTN {
+    height: 30px;
+    font-size: 15px;
+    color: #fff;
+    background: -webkit-linear-gradient(left,#312e37, rgb(60, 58, 58, .8)); 
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px gray;
+    padding: 3px;
+    margin: 5px 0;
+}
+
+.BTN:hover {
+    background: -webkit-linear-gradient(left, rgb(60, 58, 58, .8), rgb(80, 78, 78, .5)); 
+    /* border: 2px solid rgb(60, 58, 58); */
+}
+
+#main{
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+.mainPage {
+    width: 100%;
+    display: flex;
+}
+
+.content {
+    flex: 1;
+    margin-bottom: 50px;
+}
+
+#selfInfo {
+    width: 300px;
+    height: auto;
+    font-family: 'Open Sans';
+    background: -webkit-linear-gradient(left,rgb(60, 58, 58, .8), rgb(80, 78, 78, .5)); 
+    border-radius: 5px;
+    border: 2px solid #312e37;
+    box-shadow: 2px 2px 5px gray;
+    margin: 5px 10px 65px;
+    padding: 0 5px;
+    color: #fafafa;
+}
+
+#selfInfo h4 {
+    border-bottom: 3px solid #fafafa;
+    margin: 10px auto;
+    text-align: center;
+    font-size: 20px;
+}
+
+#selfInfo .BTN{
+    width: 100%;
+    margin: 10px auto;
+    background-color: #312e37;
+}
+
+.selfInfoLIDiv {
+    display: inline-block;
+    width: 70%;
+}
+
+.infoForm {
+    width: 40%;
+    margin: 30px auto;
+    font-size: 20px;
+}
+
+.infoForm input {
+    width: 100%;
+    height: 40px;
+    margin: 15px 0;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 2px solid #312e37;
+    box-shadow: 2px 2px 5px gray;
+}
+
+.infoForm button {
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    background-color: #312e37;
+    box-shadow: 2px 2px 5px gray;
+    border-radius: 5px;
+    outline: none;
+}
+
+.warning {
+    display: none;
+    color: red;
+    font-size: 10px;
+}
+
+#transform, #transformToLogin {
+    text-align: center;
+}
+
+#UserpageTitle {
+    line-height: 40px;
+    font: bolder 30px 'Georgia';
+    text-align: center;
+    padding: 5px 0 15px 10px;
+}
+
+#topSearch, #newPost {
+    width: 100%;
+    text-align: center;  
+    margin: 0 auto;
+}
+
+#topSearch input, #newContentPost, .feedBottom input {
+    width: 65%;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 2px solid #312e37;
+    box-shadow: 2px 2px 5px gray;
+    margin: 5px 0;
+}
+
+#topSearch input, #file, .feedBottom input {
+    float: left;
+}
+
+#topSearch button, #subNewPost, #UserpageTitle button, #selfInfo #selfInfoBTN {
+    float: right;
+    width: 15%;
+    height: 30px;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    background-color: #312e37;
+    box-shadow: 2px 2px 5px gray;
+    border-radius: 5px;
+    outline: none;
+    margin: 5px 0;
+}
+
+#selfInfo #selfInfoBTN {
+    width: 20%;
+    height: 23px;
+    font-size: 13px;
+    margin: 0;
+}
+
+#topSearch button:hover, #subNewPost:hover, #UserpageTitle button:hover, .infoForm button:hover {
+    color: #312e37;
+    background-color: white;
+}
+
+.CommentBTN {
+    float: right;
+    width: 15%;
+    height: 30px;
+}
+
+#selfInfoUL {
+    margin-top: 20px;
+}
+
+#selfInfoUL li {
+    height: 25px;
+    padding-left: 5px;
+    margin: 5px 0;
+}
+
+#selfInfoUL #Focus {
+    height: auto;
+}
+
+#Focus div {
+    height: 20px;
+}
+
+#UserpageTitle button {
+    float: right;
+    font-size: 20px;
+}
+
+#newContentPost {
+    width: 100%;
+    height: 120px;
+}
+
+.newPostLower {
+    width: 100%;
+    height: 40px;
+}
+
+.newPostLower label {
+    font-size: 13px;
+    float: left;
+}
+
+#subNewPost {
+    height: 30px;
+}
+
+#file, .newPostLower label {
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+    color: blue;
+}
+
+#file {
+    width: 180px;
+}
+
+.eachFeed {
+    width: 100%;
+    margin: 0 0 15px 0;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 2px solid #312e37;
+    box-shadow: 2px 2px 5px gray;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.topFeed {
+    height: 35px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.NameBTN {
+    float: left;
+    font: 30px 'Open Sans';
+    font-weight: bolder;
+    margin-right: 15px;
+}
+
+.postDate {
+    float: right;
+    font-style: italic;
+}
+
+.FocusUser {
+    font: italic 15px 'Open Sans';
+    height: 20px;
+    line-height: 20px;
+    margin-left: 10px;
+}
+
+.pictures {
+    width: 100%;
+    border-bottom: 1px solid gray;
+    border-top: 1px solid gray;
+}
+
+.pictures img {
+    width: 450px;
+    margin: 0 auto;
+}
+
+.feedBottom, .commentTop {
+    overflow: hidden;
+    border-top: 1px solid gray;
+}
+
+.commentsNum, .likesNum, .btnComment, .btnLike {
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+}
+
+.commentsNum, .likesNum {
+    font-style: italic;
+}
+
+.profileForm input {
+    width: 100%;
+    height: 30px;
+    margin: 10px 0;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 2px solid #312e37;
+    box-shadow: 2px 2px 5px gray;
+}
+
+.description {
+    display: flex;
+}
+
+.description p {
+    flex: 1;
+    font-size: 18px;
+    line-height: 40px;
+    padding-left: 5px;
+}
+
+.deleteBTN, .editBTN {
+    width: 10%;
+}
+
+.editPost input {
+    width: 80%;
+}
+
+.editPost button {
+    width: 20%
+}
+
+b {
+    font-size: 18px;
+    padding: 0 5px;
+}
+
+.commentTop { 
+    background: -webkit-linear-gradient(left, rgb(201, 186, 186), #fafafa); 
+}
+
+.commentTop i {
+    margin-left: 10px;
+}
+
+.commentText {
+    font-size: 18px;
+    padding: 0 5px;
+}
+
+.selfInfoLI i {
+    font-size: 18px;
+    color: #fafafa;
+}
+
+@media screen and (max-width: 870px) {
+    .pictures img {
+        width: 70%;
+    }
+
+    #selfInfo {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 595px) {
+    .pictures img {
+        width: 100%;
+    }
+
+    .newPostLower label {
+        display: none;
+    }
+
+    .infoForm {
+        width: 100%;
+    }
+
+    #topSearch button, #subNewPost, #UserpageTitle button {
+        width: 25%;
+    }
+
+    #selfInfo {
+        display: none;
+    }
+}
